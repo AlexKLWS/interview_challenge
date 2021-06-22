@@ -62,7 +62,7 @@ export class CoachWorkoutsService implements ICoachWorkoutsService {
         },
       )
       coachWorkouts.unshift({ daySelector: true })
-      this._workouts.next(coachWorkouts)
+      this._workouts.next([])
     } catch (error) {
       firebase.crashlytics().recordCustomError(errors.COACH_WORKOUTS_FETCH_ERROR, error.message)
     }
